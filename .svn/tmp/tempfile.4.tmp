@@ -1,0 +1,303 @@
+/*
+Theme Name: Ortho
+Theme URI: http://blog.founddrama.net/
+Description: Named for a character in David Foster Wallace's <em>Infinite Jest</em>, Ortho is a theme custom built, 50-75% from scratch for deployment on <a href="http://blog.founddrama.net">Rob Friesel's F_D blog</a>.  It is an attempt to (1) minimize page load times through minimal http requests and (2) to experiment with jQuery for special effects.
+Author: Rob Friesel
+Author URI: http://blog.founddrama.net/
+Version: 0.4
+.
+"Baked in" support for: <a href="http://seanmcb.com/projects/wordpress/sparkstats">SparkStats</a> (in the footer), <a href="http://www.sonsofskadi.net/extended-live-archive/">Extended Live Archive</a>, and <a href="http://www.neato.co.nz/ultimate-tag-warrior/">Ultimate Tag Warrior</a> plug-ins.
+.
+"To Do" list: thorough IE6+7 audit; expand jQuery usage; (more) CSS clean-up.
+*/
+
+/* BASIC ELEMENTS FIRST (as best we can) */
+body {
+	background:#222 url('images/bg-rabbit-transparent.gif') no-repeat top left fixed;
+	font-family:'Optima' Georgia serif;
+	font-size:14px;
+}
+* {	margin:0px; padding:0px; } /* murder margins, poach padding... */
+p, li { font-size:1em; line-height:2em; }
+blockquote {
+	background:#666 url('images/quote-ripped-edge.gif') repeat-y right;
+	border-left:double #710; 4px;
+	color:#fff;
+	margin:2em;
+	padding:0.5em 1.5em 0.5em 12px;
+}
+blockquote, blockquote p { 	font-size:0.9em; line-height:1.7em; }
+blockquote blockquote, #discussion blockquote { background:#666; }
+ul, ol { margin:0.5em 0px 0.5em 1.5em; }
+ul { list-style-type:square; }
+li { padding-left:1em; }
+code, tt { font: 0.9em 'Andale Mono', Courier, monospace; }
+a {
+	color:#710;
+	text-decoration:none;
+}
+blockquote a, li.alt a { color:#da0; }
+/*a:hover {border-bottom:dashed 1px #710;}*/
+a:hover {text-decoration:underline;}
+hr { display:none; }
+
+/*_ OUR SPECIFIC STYLES */
+#page {
+	margin:0px 12em 0px 8%;
+	position:relative;
+	min-width:792px;
+}
+* html #page { width:812px; } /*IEhack*/
+
+/*_ MASTHEAD/HEADER */
+#masthead {
+	color:#ddd;
+	font-family:'Lucida Grande' sans-serif;
+	font-size:0.8em;
+	height:160px;
+	overflow:hidden;
+	padding-right:21px;
+}
+#masthead h1 {
+	font-size:5em;
+	letter-spacing:0.05em;
+	position:relative;
+	top:108px;
+}
+#masthead h1 a {
+	color:#ddd;
+	text-decoration:none;
+}
+#masthead h1 a:hover {
+	background:#710;
+	color:#222;
+}
+#get-oblique {
+	display:inline;/*forIE*/
+	float:right;
+	position:absolute;
+	right:20px;
+	text-align:right;
+	top:9em;
+	width:231px;
+}
+#masthead .menu {
+	display:inline;/*forIE*/
+	float:right;
+	position:absolute;
+	right:20px;
+	top:0.05em;
+}
+ul.menu li {
+	border-bottom:dashed #ddd 1px;
+	border-right:dashed #ddd 1px;
+	display:inline;
+	margin: 0;
+	padding:2px 7px;
+}
+ul.menu li a {
+	font-size: 1em;
+	color: white;
+	margin:2px;
+	padding:2px 4px;
+}
+ul.menu li a:hover {
+	background: #333;
+	color: #eee !important;
+	text-decoration: none;
+}
+ul.menu li.current_page_item a, 
+ul.menu li.current_page_item a:hover {
+	color: #333 !important;
+	background: white;
+	text-decoration: none;
+}
+/*_ BLOG BODY (not to be confused with <body>) */
+#body {
+	background:#eee url('images/page-ripped-edge.gif') repeat-y right;
+	padding-right:20px;
+}
+.failover {
+	min-height:8em;
+}
+* html .failover { height:8em; }
+.failover h2 { margin-bottom:1em; }
+.failover h2, .pagetitle { font-family: 'Lucida Grande' sans-serif; }
+.failover form { margin-left:3em; }
+
+/*_ POSTS (and some about comments) */
+.post, #discussion, .pagetitle, .failover { padding:14px 0px 0px 28px; }
+.post-meta, #comment-sidebar {
+	display:inline;/*forIE*/
+	float:right;
+	margin-right:20px;
+	/*padding:3em 7px 14px 0px;*/
+	position:relative;
+	top:2.25em;
+	width:20%;
+}
+.post-meta, .post-meta p {
+	font-family:'Lucida Grande' sans-serif;
+	font-size:0.8571em;
+	margin-bottom:1.2857em;
+}
+.navigation, .post-body, #current-comments {
+	/* max-width:70%; */
+	min-width:520px;
+	width:70%;
+}
+* html .navigation, * html #current-comments, * html .post-body { width:70%; }/*majorIEhack*/
+.navigation { padding:1.5em; }
+.navigation>div.alignleft { margin-left:1em; }
+.post-body, #current-comments {
+	display:inline;/*forIE*/
+	float:left;
+}
+.post-body h2, .archives h2 {
+	border-bottom:double #710 4px;
+	font-family:'Lucida Grande' sans-serif;
+	font-size:1.7143em;
+	margin-bottom:1em;
+}
+.post-body h2 a, .post-body h2 a {
+	color:#222;
+	text-decoration:none;
+}
+.entry>p, .commentlist li>p { margin-bottom:2em; }
+.permalink-hash {
+	bottom:-0.75em;
+	color:#710;
+	display:inline;/*forIE*/
+	font-size:0.5em;
+	float:right;
+	position:relative;
+}
+
+/*_ COMMENTARIUM! and discussion */
+div#discussion { border-top:dashed #710 1px; }
+h3#commentlist { font-family:'Lucida Grande' sans-serif; }
+ol.commentlist { list-style-type:none; }
+ol.commentlist>li, ol.commentlist>li p {}
+ol.commentlist>li {
+	border-left:dotted #710 1px;
+	border-top:dotted #710 1px;
+	margin:0.5em;
+}
+li.alt {
+	color:#fff;
+	background:#666;
+}
+.commentmetadata, .comment-track {
+	display:inline;/*forIE*/
+	float:right;
+	font-size:0.75em;
+	margin-right:0.75em;
+}
+.comment-track { font-family:'Lucida Grande' sans-serif; }
+.commentlist cite {
+	font:1.25em 'Lucida Grande' sans-serif;
+	margin-left:-0.5em;
+}
+.nocomments {
+	background:#ddd;
+	border:dashed #710 2px;
+	color:#710;
+	font-family:'Lucida Grande' sans-serif;
+	font-weight:bold;
+	padding:4px;
+}
+
+/*_ FOOTER */
+#footer {
+	color:#ddd;
+	font-family:'Lucida Grande' sans-serif;
+	font-size:0.7em;
+	padding:2em 0.5em;
+}
+#footer>div {
+	display:inline;/*forIE*/
+	float:left;
+	margin:0px 8px;
+	width:30.5%;
+}
+#footer div div, #footer img { margin:1em 0px; }
+#footer h2 { font-size:1.1em; }
+#footer a { /* color:#da0; */ color:#ccc; }
+#wp-calendar { width:75%; }
+#wp-calendar th, #wp-calendar td { padding:2px; text-align:center; }
+#wp-calendar a { border:solid 1px #710; padding:2px; }
+#wp-calendar #today { background:#666; }
+#footer li {
+	line-height:1.5em;
+	list-style-type:square;
+	padding-left:0em;
+}
+.delicious-posts img { margin-bottom:0em !important; }
+#footer > #license { line-height:2em; text-align:center; }
+#footer > #wp-meta { float:right; }
+
+/*_ IMAGES! (stolen from k2) */
+img { border:none; }
+.post-body img, .post-body * img {
+	margin: 0.25em;
+	padding: 2px;
+	border: 1px solid #666;
+	max-width:100%;
+}
+.alignright, img[align="right"] {
+	display:inline;/*forIE*/
+	float:right;
+	margin-right:0px;
+}	
+.alignleft, img[align="left"] {
+	display:inline;/*forIE*/
+	float:left;
+	margin-left:0px;
+}
+.aligncenter, div.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+img.noborder, img.nostyle { border: none !important; }
+img.nostyle {
+	margin:0px !important;
+	padding:0px !important;
+}
+.wp-caption {
+   border: 1px solid #222;
+   text-align: center;
+   background-color:#ddd;
+   padding-top: 4px;
+   margin: 10px;
+}
+p.wp-caption-text {
+	color:#222;
+	font-family:'Lucida Grande' sans-serif;
+	font-size:0.8em;
+}
+
+/*_ Ext. Live Archives Page */
+.archives { margin-right:20px; }
+
+/*_ del.icio.us linkdump styles */
+.delicious li {
+	display:block;
+	margin-bottom:0.5em;
+}
+.post-body .delicious li .delicious-link {
+	font-size:1.1em !important;
+	font-weight:bold;
+	margin-left:-1em;
+}
+.delicious-extended { font-size:1em !important; }
+.delicious-tags { font-size:smaller; }
+
+/*_ footnoes plug-in styles */
+hr.footnotes {
+	color:#ddd;
+	display:block;
+	size:1px;
+	width:80%;
+	}
+ol.footnotes li { font-size:smaller; }

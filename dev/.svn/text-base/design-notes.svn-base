@@ -1,0 +1,20 @@
+REQ'MENTS
+* fixed width
+** to accommodate Flickr badge
+** keep the text to reasonable line-lengths
+* content area: 500px + margins/padding
+** accommodate large Flickr images
+* minimize # downloads
+** slimmer CSS
+** slimmer JavaScript libraries
+** (keep it to PHP includes & jQuery?)
+
+LIKE
+* sidebar ~BUT~
+** sidebar for post meta
+** date, comments (?) etc.
+
+DON'T LIKE
+* put the design's content flush w/ the top
+** this is a habit I have a hard time getting out of
+** that said: I could put Colophon, Archive etc. links up there

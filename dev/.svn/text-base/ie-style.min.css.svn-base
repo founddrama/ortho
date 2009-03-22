@@ -1,0 +1,1 @@
+* html #ortho-page{width:812px;}#ortho-masthead h1{font-family:'Lucida Grande' 'Trebuchet MS' 'Verdana' sans-serif;}#ortho-masthead .menu{display:inline;}ul.menu li{display:inline;position:relative;}.menu li.page_item:hover>ul,.menu li.page_item>ul:hover{display:none;}* html .failover{height:8em;}

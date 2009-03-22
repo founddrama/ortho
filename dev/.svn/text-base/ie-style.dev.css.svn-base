@@ -1,0 +1,26 @@
+/*_ for IE */
+* html #ortho-page {
+	/* b/c it doesn't honor min-width */
+	width: 812px;
+}
+#ortho-masthead h1 {
+	/* b/c it loses this formatting for some bizarre reason otherwise */
+	font-family: 'Lucida Grande' 'Trebuchet MS' 'Verdana' sans-serif;
+}
+#ortho-masthead .menu {
+	/* to fix the menu at the top */
+	display: inline;
+}
+ul.menu li {
+	/* to fix the menu at the top */
+	display: inline;
+	position: relative;
+}
+.menu li.page_item:hover>ul, .menu li.page_item>ul:hover {
+	/* to hide sub-items in the menu */
+	display: none;
+}
+* html .failover {
+	/* b/c it doesn't honor min-width */
+	height: 8em;
+}

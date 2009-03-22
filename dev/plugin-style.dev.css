@@ -1,0 +1,100 @@
+/*
+plugin-style.css
+This file contains CSS for plugins and other 3rd party add-ons to WordPress/Ortho.
+*/
+
+/*_ del.icio.us linkdump styles */
+.delicious li {
+	display: block;
+	margin-bottom: 0.5em;
+}
+.post-body .delicious li .delicious-link {
+	font-size: 1.1em !important;
+	font-weight: bold;
+	margin-left: -1em;
+}
+.delicious-extended {
+	font-size: 1em !important;
+}
+.delicious-tags {
+	font-size: smaller;
+}
+.delicious-posts img {
+	margin-bottom: 0em !important;
+}
+
+/*_ footnotes plug-in styles */
+hr.footnotes {
+	color: #710;
+	display: block;
+	size: 1px;
+	opacity: 0.25;
+	visibility: visible;
+}
+ol.footnotes li {
+	font-size: smaller;
+}
+
+/*_ Twitter marquee */
+#twitter_div {
+	border-bottom: 1px dashed #666;
+}
+
+/*_ Flickr badge */
+#flickr_badge_uber_wrapper {
+	height: 81px;
+	position: relative;
+	text-align: center;
+	width: 782px;
+}
+.flickr_badge_image img {
+	border: none;
+	position: relative;
+}
+#flickr_badge_source {
+	margin: 0 10px 0 10px;
+	text-align: left;
+}
+#flickr_badge_icon {
+	float: left;
+	margin-right:5px;
+}
+#flickr_www_wrapper {
+	background: #fff;
+	bottom: 2px;
+	font-weight: bold;
+	padding: 1px;
+	position: absolute;
+	right: 1px;
+	z-index: 1001;
+}
+#flickr_www {
+	color: #3993ff !important;
+	display: block;
+	font: 11px 'Arial' 'Helvetica' sans-serif !important;
+	font-weight: bold;
+}
+#flickr_badge_uber_wrapper a:hover,
+#flickr_badge_uber_wrapper a:link,
+#flickr_badge_uber_wrapper a:active,
+#flickr_badge_uber_wrapper a:visited {
+	background: inherit !important;
+	border: none;
+	color: #3993ff;
+	text-decoration: none !important;
+}
+#flickr_badge_source {
+	color:#666666 !important;
+	font: 11px 'Arial' 'Helvetica' sans-serif !important;
+	padding:0 !important;
+}
+.flickr_badge_image {
+	float: left;
+	margin: 3px 1px 3px 2px;
+}
+#flickr_badge_image1 {
+	margin-left: 3px;
+}
+#flickr_badge_image10 {
+	margin-right: 2px;
+}

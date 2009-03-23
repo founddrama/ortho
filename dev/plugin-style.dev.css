@@ -5,9 +5,12 @@ This file contains CSS for plugins and other 3rd party add-ons to WordPress/Orth
 
 /*_ Gravatars in comments.php */
 img.avatar {
+	background: white;
+	border: 1px solid #ccc;
 	display: inline;
 	float: left;
 	margin: 4px 16px 0 -10px;
+	padding: 2px;
 }
 
 /*_ del.icio.us linkdump styles */

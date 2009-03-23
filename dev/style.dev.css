@@ -176,9 +176,11 @@ ul.menu {
 	right: 20px;
 	top: -7px;
 }
+.menu li { float: left; }
 .menu li {
 	border-bottom: dashed #ddd 1px;
 	border-right: dashed #ddd 1px;
+	float: left;
 	margin: 0;
 	padding: 2px 7px 5px;
 }
@@ -211,7 +213,7 @@ ul.menu {
 }
 .menu li.page_item:hover>ul, .menu li.page_item>ul:hover {
 	display: block;
-	margin: 0;
+	margin: 6px 0 0;
 	position: absolute;
 	right: 0px;
 }

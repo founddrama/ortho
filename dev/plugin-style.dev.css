@@ -3,6 +3,13 @@ plugin-style.css
 This file contains CSS for plugins and other 3rd party add-ons to WordPress/Ortho.
 */
 
+/*_ Gravatars in comments.php */
+img.avatar {
+	display: inline;
+	float: left;
+	margin: 4px 16px 0 -10px;
+}
+
 /*_ del.icio.us linkdump styles */
 li.widget h2.delicious-banner {
 	font-size: 1.2em;

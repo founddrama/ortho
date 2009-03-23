@@ -26,6 +26,9 @@
 	<?php $comment_type = get_comment_type(); ?>
 	<?php if($comment_type == 'comment') { ?>
 		<li class="<?php echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
+			<?php 
+				echo get_avatar( $id_or_email, $size = '48' ); 
+			?>
 			<cite><?php comment_author_link() ?>:</cite>
 			<?php if ($comment->comment_approved == '0') : ?>
 			<em>Your comment is awaiting moderation.</em>

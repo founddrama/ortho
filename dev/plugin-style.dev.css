@@ -4,6 +4,9 @@ This file contains CSS for plugins and other 3rd party add-ons to WordPress/Orth
 */
 
 /*_ del.icio.us linkdump styles */
+li.widget h2.delicious-banner {
+	font-size: 1.2em;
+}
 .delicious li {
 	display: block;
 	margin-bottom: 0.5em;

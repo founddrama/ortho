@@ -47,9 +47,11 @@ blockquote a:hover {
 	border: none;
 	text-decoration: underline;
 }
-blockquote, blockquote p {
-	font-size: 0.9em;
-	line-height: 1.7em;
+blockquote {
+	font-size: 0.8571em;
+}
+blockquote p {
+	line-height: 1.75em;
 }
 blockquote blockquote, #discussion blockquote {
 	background: #666;
@@ -251,10 +253,11 @@ ul.menu {
 }
 
 /*_ POSTS (and some about comments) */
-.post {
+blockquote p, .post {
 	margin-top: 2em;
 }
-.post:first-child {
+blockquote p:first-child, .post:first-child {
+	/* don't double up! */
 	margin-top: 0;
 }
 .post:first-child h2:before {

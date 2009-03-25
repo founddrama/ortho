@@ -14,7 +14,7 @@ a, abbr, acronym, address, cite, code, del,
 dfn, em, font, img, ins, kbd, q, s, samp,
 strike, strong, tt, var, dl, dt, dd, ol,
 ul, li, fieldset, form, label, legend, table,
-caption, tbody, tfoot, thead, tr, th, td {
+caption, tbody, tfoot, thead, tr, th, td, sub, sup {
 	/* murder margins, poach padding; reset everything... */
 	margin: 0;
 	padding: 0;
@@ -25,7 +25,7 @@ caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
 	font-family: inherit;
 	vertical-align: baseline;
-	/* excluded from the reset: big, small, sub, sup */
+	/* excluded from the reset: big, small */
 	/* revisit with http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/ */
 }
 body {
@@ -124,6 +124,18 @@ h4, h5, h6 {
 	/* h4-h6 are half-assed here b/c we're not really expecting to use them */
 	font-size: 1.0714em;
 	margin-top: 1.5em;
+}
+sub, sup {
+	/* sub- and superscript sizing... */
+	font-size: .7857em;
+}
+sup {
+	/* ...and vertical alignment */
+	vertical-align: super;
+}
+sub {
+	/* ...and vertical alignment */
+	vertical-align: sub;
 }
 
 /*_ CONTENT AREA WIDTH CONTROL */

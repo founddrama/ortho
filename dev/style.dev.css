@@ -580,8 +580,11 @@ img.nostyle {
    border: 1px solid #222;
    text-align: center;
    background-color: #ddd;
-   padding-top: 4px;
+   padding: 4px;
    margin: 10px;
+}
+.wp-caption img {
+	margin: 0;
 }
 p.wp-caption-text {
 	color: #222;

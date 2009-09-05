@@ -76,7 +76,7 @@
 	</div><hr />
 <?php } else { ?>
 	<div class="navigation">
-		<?php posts_nav_link('','<div class="alignright">Next Entries &raquo;</div>','<div class="alignleft">&laquo; Previous Entries</div>') ?>
+		<?php posts_nav_link(' ','<div class="alignright">Next Entries &raquo;</div>','<div class="alignleft">&laquo; Previous Entries</div>') ?>
 	</div><hr />
 <?php } ?>
 

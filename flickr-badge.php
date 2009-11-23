@@ -12,7 +12,7 @@ $(document).ready(function(){
 		i = $(this).children("a").children("img");
 		var t = $(this).find("img").attr("title");
 		
-		i.css({ border:"4px solid #ff1c92", margin:"-4px", zIndex:"1000" });
+		i.css({ border:"4px solid #ff1c92", margin:"-4px", zIndex:"200" });
 		w.fadeOut("slow", function(){
 			w.empty().append(t).fadeIn("slow");
 		});

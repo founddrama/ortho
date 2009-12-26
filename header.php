@@ -4,7 +4,7 @@
 
 <head profile="http://gmpg.org/xfn/11">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<title><?php wp_title(''); if (function_exists('is_tag') and is_tag()) { ?>Tag Archive for <?php echo $tag; } if (is_archive()) { ?> archive<?php } elseif (is_search()) { ?> Search for <?php echo $s; } if ( !(is_404()) and (is_search()) or (is_single()) or (is_page()) or (function_exists('is_tag') and is_tag()) or (is_archive()) ) { ?> at <?php } ?> <?php bloginfo('name'); ?></title>
+	<title><?php wp_title(''); if (is_archive()) { if (function_exists('is_tag') and is_tag()) { ?> tag<?php }?> archive<?php } elseif (is_search()) { ?> search for <?php echo $s; } if ( !(is_404()) and (is_search()) or (is_single()) or (is_page()) or (function_exists('is_tag') and is_tag()) or (is_archive()) ) { ?> at <?php } ?> <?php bloginfo('name'); ?></title>
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <?php /* leave this for stats */ ?>
 	<meta name="template" content="Ortho" />
  	<meta name="description" content="<?php bloginfo('description'); ?>" />

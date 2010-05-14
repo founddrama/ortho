@@ -84,7 +84,7 @@ hr {
 body {
 	font-family: 'Optima' 'Georgia' serif;
 }
-code, tt {
+code, tt, pre {
 	font: 0.9em 'Consolas' 'Andale Mono' 'Courier' monospace;
 }
 #current-comments>h3, #comment-form-container>h3, #commentform>#commentform-east,
@@ -589,4 +589,10 @@ img.nostyle {
 p.wp-caption-text {
 	color: #222;
 	font-size: 0.8em;
+}
+/* for Amazon Affiliates */
+img.amazon-beacon {
+	border: none !important;
+	margin:0px !important;
+	padding: 0px !important;
 }

@@ -19,9 +19,6 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="canonical" href="<?php the_permalink() ?>" />
 	<?php } ?>
-	<?php /* <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.js"></script> */ ?>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jcarousellite.js"></script>
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php wp_head(); ?>
 </head>

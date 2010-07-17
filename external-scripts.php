@@ -8,3 +8,4 @@
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
 <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/founddrama.json?callback=twitterCallback2&count=5"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/fd-blog-scripts.min.js"></script>
+<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=10&display=random&size=s&layout=x&source=user&user=28555778%40N00"></script>

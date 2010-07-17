@@ -21,8 +21,9 @@ $(document).ready(function(){
 	});
 	
 	// for the Flickr badge 
-	var i, w = $("#flickr_www_wrapper");
-	$(".flickr_badge_image").hover(function(){
+	var i, w = $("#flickr_www_wrapper"), b = $(".flickr_badge_image");
+	
+	b.delay(100).appendTo($("#flickr_badge_wrapper")).hover(function(){
 		i = $(this).children("a").children("img");
 		var t = $(this).find("img").attr("title");
 		

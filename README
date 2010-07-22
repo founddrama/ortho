@@ -1,0 +1,22 @@
+ORTHO - a theme for WordPress
+
+Theme URI: http://blog.founddrama.net/
+
+Description: Named for a character in David Foster Wallace's <em>Infinite
+Jest</em>, Ortho is a theme custom built, ≈75% from scratch for deployment on
+<a href="http://blog.founddrama.net">Rob Friesel's F_D blog</a>.  It is an
+attempt to (1) minimize page load times through minimal http requests and (2)
+to experiment with jQuery for special effects.
+
+Author: Rob Friesel
+
+Author URI: http://blog.founddrama.net/
+
+Version: 1.0
+
+NOTES:
+- The site references minified versions of certain resources (e.g., css and js
+  files); the author recommends a built script to handle creating these
+  minified files and putting them in the right place
+- - A sample deploy script is included at ./dev/deploy.sh
+- - see also : <http://developer.yahoo.com/yui/compressor/>

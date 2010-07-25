@@ -1,2 +1,9 @@
+# old SVN cruft
 *.svn/*
+
+# espressso projects
 ortho.esproj/*
+
+# minified .js files
+*.min.css
+*.min.js

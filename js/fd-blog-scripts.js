@@ -1,3 +1,71 @@
+// @namespace
+var F_D = {};
+
+
+// Tumblr 
+F_D.buildTumbls = function(json){
+	var	posts		= json.posts,
+		ulString	= "<ul>";
+	
+	while (posts.length > 0) {
+		var p = posts.shift(),
+			li = ['<li><a href="', p.url, '">'],
+			txt;
+		
+		switch(p.type){
+			// @todo - case "audio":
+			// @todo - case "conversation":
+			case "link":
+				txt = p["link-text"];
+				break;
+			case "photo":
+				txt = p["photo-caption"] || "(uncaptioned)";
+				break;
+			case "quote":
+				txt = p["quote-text"];
+				if (txt.length > 100) {
+					txt = txt.substr(0, 100);
+					txt = txt.substr(0, txt.lastIndexOf(" ")) + "...";
+				}
+				break;
+			case "regular":
+				txt = p["regular-title"];
+				break;
+			// @todo - case "audio":
+		}
+		
+		li.push(txt, '</a></li>');
+		
+		ulString += li.join('');
+	}
+	
+	return ulString;
+};
+
+F_D.writeTumblrList = function(divId, json){
+	var	blog	= json.tumblelog,
+		posts	= F_D.buildTumbls(json),
+		widget	= $("#" + divId);
+	
+	widget.closest("li").children("h2")
+		.addClass("tumblr-list")
+		.empty().append(blog.title)
+		.wrap('<a href="http://'+blog.name+'.tumblr.com/" />');
+	widget.append(posts);
+};
+
+F_D.notanotherrobOut = function(json){
+	F_D.writeTumblrList("notanotherrob", json);
+};
+
+F_D.notundefinedOut = function(json){
+	F_D.writeTumblrList("notundefined", json);
+};
+
+F_D.notnonfictionOut = function(json){
+	F_D.writeTumblrList("notnonfiction", json);
+};
+
 /**
  * @requires {jQuery} and {jCarouselLite}
  */

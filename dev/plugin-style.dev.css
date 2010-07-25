@@ -111,3 +111,13 @@ ol.footnotes li {
 #flickr_badge_image10 {
 	margin-right: 2px;
 }
+
+/* Tumblr */
+h2.tumblr-list {
+	background: url(images/tumblr-icon.png) no-repeat;
+	border-bottom: transparent 1px solid;
+	padding-left: 20px;
+}
+h2.tumblr-list:hover {
+	border-bottom: #710 1px dotted;
+}

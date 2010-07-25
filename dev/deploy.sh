@@ -10,7 +10,7 @@ echo "Updating Ortho theme from the latest in the git repo's master branch:"
 git pull --verbose
 
 # minify the .js files
-for j in `find . -name *.js` ; do
+for j in `find . -name *[^min].js` ; do
 	minName=${j/%\.js/.min.js}
 	echo "Compressing '${j}' to '${minName}':"
 	java -jar ~/build/bin/yuicompressor-2.4.2.jar -o ${minName} ${j}

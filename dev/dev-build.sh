@@ -5,7 +5,7 @@
 # @requires <http://developer.yahoo.com/yui/compressor/>
 
 # minify the .js files
-for j in `find . -name *.js` ; do
+for j in `find . -name *[^min].js` ; do
 	minName=${j/%\.js/.min.js}
 	echo "Compressing '${j}' to '${minName}':"
 	java -jar ~/Applications/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar -o ${minName} ${j}

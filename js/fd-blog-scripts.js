@@ -12,6 +12,14 @@ F_D.buildTumbls = function(json){
 			li = ['<li><a href="', p.url, '">'],
 			txt;
 		
+		var shortnr = function(txt){
+			if (txt.length > 100) {
+				txt = txt.substr(0, 100);
+				txt = txt.substr(0, txt.lastIndexOf(" ")) + "...";
+			}
+			return txt;
+		};
+		
 		switch(p.type){
 			// @todo - case "audio":
 			// @todo - case "conversation":
@@ -22,14 +30,10 @@ F_D.buildTumbls = function(json){
 				txt = p["photo-caption"] || "(uncaptioned)";
 				break;
 			case "quote":
-				txt = p["quote-text"];
-				if (txt.length > 100) {
-					txt = txt.substr(0, 100);
-					txt = txt.substr(0, txt.lastIndexOf(" ")) + "...";
-				}
+				txt = shortnr(p["quote-text"]);
 				break;
 			case "regular":
-				txt = p["regular-title"];
+				txt = shortnr(p["regular-title"] || p["regular-body"]);
 				break;
 			// @todo - case "audio":
 		}

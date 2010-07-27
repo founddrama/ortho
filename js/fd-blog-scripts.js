@@ -35,7 +35,9 @@ F_D.buildTumbls = function(json){
 			case "regular":
 				txt = shortnr(p["regular-title"] || p["regular-body"]);
 				break;
-			// @todo - case "audio":
+			case "video":
+				txt = shortnr(p["video-caption"] || "(video)");
+				break;
 		}
 		
 		li.push(txt, '</a></li>');

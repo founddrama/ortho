@@ -18,7 +18,7 @@ done
 
 # minify the .css files
 for c in `find . -name *.dev.css` ; do
-	minName=`echo ${c} | awk -F"dev[\/\.]" '{print $1 $2 $3}'`
+	minName=`echo ${c} | awk -F"dev[/.]" '{print $1 $2 $3}'`
 	echo "Compressing '${c}' to '${minName}':"
 	java -jar ~/build/bin/yuicompressor-2.4.2.jar -o ${minName} ${c}
 done

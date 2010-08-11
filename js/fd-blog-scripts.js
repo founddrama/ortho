@@ -13,21 +13,26 @@ F_D.buildTumbls = function(json){
 			txt;
 		
 		var shortnr = function(txt){
-			if (txt.length > 100) {
-				txt = txt.substr(0, 100);
-				txt = txt.substr(0, txt.lastIndexOf(" ")) + "...";
-			}
-			return txt;
-		};
+				if (txt.length > 100) {
+					txt = txt.substr(0, 100);
+					txt = txt.substr(0, txt.lastIndexOf(" ")) + "...";
+				}
+				return txt;
+			};
 		
 		switch(p.type){
-			// @todo - case "audio":
-			// @todo - case "conversation":
+			case "audio":
+				// @todo - not the best regex - but good enough for now
+				txt = p["audio-caption"].replace(/<\/?[A-Za-z]+>/g, "") || "(audio)";
+				break;
+			case "conversation":
+				txt = p["conversation-title"];
+				break;
 			case "link":
 				txt = p["link-text"];
 				break;
 			case "photo":
-				txt = p["photo-caption"] || "(uncaptioned)";
+				txt = p["photo-caption"] || "uncaptioned";
 				break;
 			case "quote":
 				txt = shortnr(p["quote-text"]);
